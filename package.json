@@ -1,24 +1,24 @@
 {
-  "name": "cra-template-typescript",
+  "name": "cra-template-typescript-electron",
   "version": "1.1.0",
   "keywords": [
     "react",
     "create-react-app",
     "template",
-    "typescript"
+    "typescript",
+    "electron"
   ],
-  "description": "The base TypeScript template for Create React App.",
+  "description": "The base TypeScript template for Create React App with Electron.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
-    "directory": "packages/cra-template-typescript"
+    "url": "https://github.com/srymh/cra-template-typescript-electron"
   },
   "license": "MIT",
   "engines": {
     "node": ">=10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/facebook/cra-template-typescript-electron/issues"
   },
   "files": [
     "template",

@@ -1,5 +1,23 @@
 {
   "package": {
+    "homepage": ".",
+    "main": "build/electron/main.js",
+    "build": {
+      "appId": "srymh.cra-template-typescript-electron",
+      "productName": "CRA Template Typescript Electron",
+      "copyright": "Copyright © 2020 srymh",
+      "extends": null,
+      "files": [
+        "build/**/*"
+      ],
+      "directories": {
+        "buildResources": "assets"
+      },
+      "win": {
+        "target": "nsis",
+        "icon": "build/assets/icons/app.ico"
+      }
+    },
     "dependencies": {
       "@testing-library/jest-dom": "^5.11.4",
       "@testing-library/react": "^11.1.0",
@@ -8,11 +26,27 @@
       "@types/react": "^16.9.53",
       "@types/react-dom": "^16.9.8",
       "@types/jest": "^26.0.15",
+      "electron-is-dev": "^1.2.0",
+      "electron-reload": "^1.5.0",
       "typescript": "^4.0.3",
       "web-vitals": "^0.2.4"
     },
+    "scripts": {
+      "postinstall": "electron-builder install-app-deps",
+      "electron:dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && tsc -p electron -w\" \"wait-on http://localhost:3000 && tsc -p electron && electron --inspect=5858 --remote-debugging-port=9223 .\"",
+      "electron:build": "yarn build && tsc -p electron && electron-builder",
+      "start": "cross-env BROWSER=NONE react-scripts start",
+      "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build"
+    },
     "eslintConfig": {
       "extends": ["react-app", "react-app/jest"]
+    },
+    "devDependencies": {
+      "concurrently": "^5.3.0",
+      "cross-env": "^7.0.2",
+      "electron": "^10.1.5",
+      "electron-builder": "^22.9.1",
+      "wait-on": "^5.2.0"
     }
   }
 }
