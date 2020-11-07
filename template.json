@@ -36,7 +36,8 @@
       "electron:dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && tsc -p electron -w\" \"wait-on http://localhost:3000 && tsc -p electron && electron --inspect=5858 --remote-debugging-port=9223 .\"",
       "electron:build": "yarn build && tsc -p electron && electron-builder",
       "start": "cross-env BROWSER=NONE react-scripts start",
-      "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build"
+      "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
+      "test:main": "jest --watch --config ./electron/jest.config.json"
     },
     "eslintConfig": {
       "extends": ["react-app", "react-app/jest"]
@@ -46,6 +47,7 @@
       "cross-env": "^7.0.2",
       "electron": "^10.1.5",
       "electron-builder": "^22.9.1",
+      "ts-jest": "^26.4.3",
       "wait-on": "^5.2.0"
     }
   }

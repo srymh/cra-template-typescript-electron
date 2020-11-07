@@ -7,7 +7,8 @@
     "outDir": "../build",
     "rootDir": "../",
     "noEmitOnError": true,
-    "typeRoots": ["node_modules/@types"],
+    "types": ["node", "jest"],
     "allowJs": true // in order to use preload.js
-  }
+  },
+  "exclude": ["./**/*.test.ts", "./**/*.spec.ts", "./**/coverage/**"]
 }
