@@ -8,6 +8,7 @@
     "rootDir": "../",
     "noEmitOnError": true,
     "types": ["node", "jest"],
+    "esModuleInterop": true,
     "allowJs": true // in order to use preload.js
   },
   "exclude": ["./**/*.test.ts", "./**/*.spec.ts", "./**/coverage/**"]
