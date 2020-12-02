@@ -1,6 +1,6 @@
 import {app, BrowserWindow, ipcMain} from 'electron';
-import * as path from 'path';
-import * as isDev from 'electron-is-dev';
+import path from 'path';
+import isDev from 'electron-is-dev';
 
 let win: BrowserWindow | null = null;
 
