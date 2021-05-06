@@ -10,6 +10,7 @@ And you can select a version using hash tag.
 | -------------- | ----------------------- | ----------- | ------ |
 | 1.1.2_10_0     | 1.1.2                   | 10 (latest) | 0      |
 | 1.1.2_10_1     | 1.1.2                   | 10 (latest) | 1      |
+| 1.1.2_11_0     | 1.1.2                   | 11 (latest) | 0      |
 
 \* The version when only this template is fixed while maintaining the version of cra-typescript-template and Electron
 
@@ -21,4 +22,8 @@ npx create-react-app my-app --template git+https://github.com/srymh/cra-template
 
 ``` sh
 npx create-react-app my-app --template git+https://github.com/srymh/cra-template-typescript-electron.git#1.1.2_10_1
+```
+
+``` sh
+npx create-react-app my-app --template git+https://github.com/srymh/cra-template-typescript-electron.git#1.1.2_11_0
 ```
