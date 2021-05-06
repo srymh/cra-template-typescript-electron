@@ -26,23 +26,6 @@ function createWindow() {
   }
 
   win.on('closed', () => (win = null));
-
-  // Hot Reloading
-  if (isDev) {
-    // 'node_modules/.bin/electronPath'
-    require('electron-reload')(__dirname, {
-      electron: path.join(
-        __dirname,
-        '..',
-        '..',
-        'node_modules',
-        '.bin',
-        'electron'
-      ),
-      forceHardReset: true,
-      hardResetMethod: 'exit',
-    });
-  }
 }
 
 app.on('ready', createWindow);
