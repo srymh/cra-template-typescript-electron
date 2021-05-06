@@ -6,10 +6,9 @@ To use this template, add `--template git+https://github.com/srymh/cra-template-
 
 And you can select a version using hash tag.
 
-| tag            | cra-typescript-template | Electron | fix \* |
-| -------------- | ----------------------- | -------- | ------ |
-| 1.1.0_10.1.5_0 | 1.1.0                   | 10.1.5   | 0      |
-| 1.1.2_10.4.4_0 | 1.1.2                   | 10.4.4   | 0      |
+| tag            | cra-typescript-template | Electron    | fix \* |
+| -------------- | ----------------------- | ----------- | ------ |
+| 1.1.2_10_0     | 1.1.2                   | 10 (latest) | 0      |
 
 \* The version when only this template is fixed while maintaining the version of cra-typescript-template and Electron
 
@@ -20,9 +19,5 @@ npx create-react-app my-app --template git+https://github.com/srymh/cra-template
 ```
 
 ``` sh
-npx create-react-app my-app --template git+https://github.com/srymh/cra-template-typescript-electron.git#1.1.0_10.1.5_0
-```
-
-``` sh
-npx create-react-app my-app --template git+https://github.com/srymh/cra-template-typescript-electron.git#1.1.2_10.4.4_0
+npx create-react-app my-app --template git+https://github.com/srymh/cra-template-typescript-electron.git#1.1.2_10_0
 ```
