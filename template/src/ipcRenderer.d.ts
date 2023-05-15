@@ -3,11 +3,11 @@
 
 declare global {
   interface Window {
-    myIpcRenderer: MyIpcRenderer;
+    ipcRenderer: IpcRenderer;
   }
 }
 
-export interface MyIpcRenderer {
+export interface IpcRenderer {
   invoke(channel: string, ...args: any[]): Promise<any>;
   send(channel: string, ...args: any[]): void;
 

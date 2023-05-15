@@ -2,9 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const myIpcRenderer = window.myIpcRenderer;
+const ipcRenderer = window.ipcRenderer;
 
 function App() {
+  const handleClick = () => {
+    ipcRenderer
+      .invoke('APP_hello', 'ping')
+      .then((message) => {
+        alert(`Received "${message}" from the main process`);
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,24 +31,8 @@ function App() {
           Learn React
         </a>
         <button
-          style={{
-            color: '#61dafb',
-            backgroundColor: '#282c34',
-            border: '2px solid white',
-            borderRadius: '3px 3px',
-            marginTop: '50px',
-            cursor: 'pointer',
-          }}
-          onClick={() => {
-            myIpcRenderer
-              .invoke('APP_hello', 'ping')
-              .then((message) => {
-                alert(`Received "${message}" from the main process`);
-              })
-              .catch((error) => {
-                alert(error);
-              });
-          }}>
+          className="Button"
+          onClick={handleClick}>
           Send "ping" to a main process
         </button>
       </header>
