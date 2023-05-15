@@ -5,7 +5,7 @@
     "build": {
       "appId": "srymh.cra-template-typescript-electron",
       "productName": "CRA Template Typescript Electron",
-      "copyright": "Copyright © 2020 srymh",
+      "copyright": "Copyright © 2023 srymh",
       "extends": null,
       "files": [
         "build/**/*"
@@ -19,21 +19,21 @@
       }
     },
     "dependencies": {
-      "@testing-library/jest-dom": "^5.11.4",
-      "@testing-library/react": "^11.1.0",
-      "@testing-library/user-event": "^12.1.10",
-      "@types/node": "^12.0.0",
-      "@types/react": "^17.0.0",
-      "@types/react-dom": "^17.0.0",
-      "@types/jest": "^26.0.15",
+      "@testing-library/jest-dom": "^5.14.1",
+      "@testing-library/react": "^13.0.0",
+      "@testing-library/user-event": "^13.2.1",
+      "@types/jest": "^27.0.1",
+      "@types/node": "^18.16.9",
+      "@types/react": "^18.0.0",
       "electron-is-dev": "^1.2.0",
-      "typescript": "^4.1.2",
-      "web-vitals": "^1.0.1"
+      "@types/react-dom": "^18.0.0",
+      "typescript": "^4.4.2",
+      "web-vitals": "^2.1.0"
     },
     "scripts": {
       "postinstall": "electron-builder install-app-deps",
-      "electron:dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && tsc -p electron -w\" \"wait-on http://localhost:3000 && tsc -p electron && electron --inspect=5858 --remote-debugging-port=9223 .\"",
-      "electron:build": "yarn build && tsc -p electron && electron-builder",
+      "electron:dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && tsc -p electron -w\" \"wait-on http://localhost:3000 && tsc -p electron && electron --inspect=5858 --remote-debugging-port=9223 .\"",
+      "electron:build": "npm build && tsc -p electron && electron-builder",
       "start": "cross-env BROWSER=NONE react-scripts start",
       "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
       "test:main": "jest --watch --config ./electron/jest.config.json"
@@ -42,12 +42,12 @@
       "extends": ["react-app", "react-app/jest"]
     },
     "devDependencies": {
-      "concurrently": "^5.3.0",
-      "cross-env": "^7.0.2",
-      "electron": "^11.0.0",
-      "electron-builder": "^22.9.1",
-      "ts-jest": "^26.4.3",
-      "wait-on": "^5.2.0"
+      "concurrently": "^8.0.1",
+      "cross-env": "^7.0.3",
+      "electron": "^24.3.0",
+      "electron-builder": "^23.6.0",
+      "ts-jest": "^29.1.0",
+      "wait-on": "^7.0.1"
     }
   }
 }
