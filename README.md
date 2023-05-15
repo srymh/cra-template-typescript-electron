@@ -19,7 +19,7 @@ And you can select a version using hash tag.
 | 1.1.2_10_0     | 1.1.2                   | 10       | 0      |
 | 1.1.2_10_1     | 1.1.2                   | 10       | 1      |
 | 1.1.2_11_0     | 1.1.2                   | 11       | 0      |
-| **1.2.0_24_0** | 1.2.0                   | 24       | 0      |
+| **1.2.0_24_2** | 1.2.2                   | 24       | 2      |
 
 \* The version when only this template is fixed while maintaining the version of cra-typescript-template and Electron
 
