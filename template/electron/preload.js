@@ -26,7 +26,7 @@ function callIpcRenderer(method, channel, ...args) {
   }
 }
 
-contextBridge.exposeInMainWorld('myIpcRenderer', {
+contextBridge.exposeInMainWorld('ipcRenderer', {
   invoke: (...args) => callIpcRenderer('invoke', ...args),
   send: (...args) => callIpcRenderer('send', ...args),
   on: (...args) => callIpcRenderer('on', ...args),
